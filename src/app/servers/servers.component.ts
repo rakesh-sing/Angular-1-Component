@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   allowNewServer: boolean = false;
-  serverName: string = 'no text';
+  serverName: string = '';
   serverCreationStatus: string = 'No Server Available';
 
   constructor() {
@@ -17,7 +17,8 @@ export class ServersComponent {
   }
 
   onServerCreation() {
-    return (this.serverCreationStatus = 'New Server is Created');
+    return (this.serverCreationStatus =
+      'New Server is Created and Name of Server is' + this.serverName);
   }
 
   // onUpdateServerName(event: any) {
